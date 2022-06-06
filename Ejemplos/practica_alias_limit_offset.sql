@@ -33,4 +33,10 @@ LIMIT 3;
 
 SELECT first_name AS Nombre, last_name AS Apellido, rating AS Calificacion FROM actors;
 
+/*** ALIAS, LIMIT Y OFFSET PARTE 2 ***/
+
+#Mostrar el título de todas las series y usar alias para que tanto el nombre de la
+#tabla como el campo estén en español.
+
+SELECT title AS titulo FROM series AS Series;
 
