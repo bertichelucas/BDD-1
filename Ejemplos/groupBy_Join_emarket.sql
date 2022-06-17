@@ -139,9 +139,9 @@ LIMIT 5;
 fecha de factura, país de envío, Total, ordenado de manera descendente por
 fecha de factura y limitado a 10 filas.*/
 
-SELECT F.FechaFactura, F.PaisEnvio, F.ClienteID, sum(FD.PrecioUnitario * FD.Cantidad) AS Total FROM facturas F
+SELECT  F.FacturaID, F.FechaFactura, F.PaisEnvio, F.ClienteID, sum(FD.PrecioUnitario * FD.Cantidad) AS Total FROM facturas F
 INNER JOIN facturadetalle FD ON F.FacturaID = FD.FacturaID
-GROUP BY F.FechaFactura, F.PaisEnvio, F.ClienteID
+GROUP BY  F.FacturaID, F.FechaFactura, F.PaisEnvio, F.ClienteID
 ORDER BY F.FechaFactura DESC
 LIMIT 10;
 
